@@ -3,7 +3,7 @@ const router = express.Router();
 const fs = require('fs')
 
 const PATH = __dirname; 
-console.log(PATH);
+//console.log(PATH);
 
 const rmExtension=(filename)=>{
     return filename.split('.').shift();
