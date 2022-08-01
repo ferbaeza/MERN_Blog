@@ -6,7 +6,7 @@ const PostSchema = new mongoose.Schema({
         required: true,
         unique: true,
       },
-      desc: {
+      description: {
         type: String,
         required: true,
       },
@@ -26,5 +26,6 @@ const PostSchema = new mongoose.Schema({
     { timestamps: true }
   );
   
-  const Post = mongoose.model("Post", PostSchema);
-  module.exports = Post;
+const Post = mongoose.model("Post", PostSchema);
+module.exports = Post;
+

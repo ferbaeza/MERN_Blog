@@ -21,4 +21,14 @@ const getCategories = async (req, res)=>{
         
     }
 }
-module.exports = {createCategory, getCategories}
+const getCategoryById = async (req, res)=>{
+    try {
+    const id = req.params._id;
+    console.log(id);
+        category = await Category.findById(id);
+        res.status(200).json(category);
+    } catch (error) {
+        res.status(500).json(   error);
+    }
+}
+module.exports = {createCategory, getCategories, getCategoryById}
