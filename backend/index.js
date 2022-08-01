@@ -7,7 +7,7 @@ const app = express();
 const multer = require('multer');
 
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5001;
 
 app.use(json());
 app.use('/api',require('./routes/index'));
