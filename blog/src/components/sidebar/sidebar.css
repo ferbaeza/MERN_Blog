@@ -16,6 +16,7 @@
     align-items: center;
   }
   
+
   .sidebarTitle {
     margin: 10px;
     padding: 5px;
@@ -33,7 +34,7 @@
   .sidebarItem > img {
     margin-top: 15px;
     width: 250px;
-    height: 250px;
+    height: 150px;
   }
   
   .sidebarItem > p {
