@@ -27,8 +27,9 @@ const loginUser = async(req, res)=>{
         const validate = await bcrypt.compare(req.body.password, user.password);
         !validate && res.status(400).json("Password not valid");     
         
-        const{password, ...others}= user._doc;
-        res.status(200).json(others);
+
+        //const {password, ...others}= user._doc;
+        res.status(200).json(user);
     } catch (error) {
         res.status(500).json(error);
     }
