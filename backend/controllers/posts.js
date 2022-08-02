@@ -35,16 +35,16 @@ const updatePost= async(req, res)=>{
 
 
 const getAllPost = async(req, res)=>{
-  const user = req.query.user;
-  const cat = req.query.categories;
+  const username = req.query.user;
+  const catName = req.query.cat;
   try {
       let posts;
-      if(user){
-          posts = await PostModel.find({user})
-      }else if(cat){
+      if(username){
+          posts = await PostModel.find({ username })
+      }else if(catName){
           posts = await PostModel.find({
               categories: {
-                $in: [cat],
+                $in: [catName],
               },
             });
           } else {
