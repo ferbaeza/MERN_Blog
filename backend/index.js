@@ -12,6 +12,7 @@ const PORT = process.env.PORT || 5001;
 app.use(json());
 app.use('/api',require('./routes/index'));
 app.use(express.static("storage"));
+app.use("/images", express.static(path.join(__dirname, "/images")));
 
 
 app.listen(PORT,(req, res)=>{
