@@ -11,7 +11,7 @@ const registerUser = async(req, res)=>{
             password:hashedPass
         });
         const user = await newUser.save();
-        console.log(user);
+        //console.log(user);
         res.status(200).json(user);
         
     } catch (error) {

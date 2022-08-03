@@ -59,7 +59,7 @@ const getAllPost = async(req, res)=>{
 
 const getPostById= async(req, res)=>{
   const id = req.params._id;
-  console.log(id);
+  //console.log(id);
   try {
     const post = await PostModel.findById(id);
     res.status(200).json(post);
