@@ -34,10 +34,12 @@ export default function TopBar(){
             <div className="topRight">
                 {
                     user?(
+                        <Link to="/settings">
                         <img 
                         src={user.profilePic || "https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1600"} 
                         alt="" className="topImg" />
 
+                        </Link>
                     ):(
                         <>
                             <ul className="topList">

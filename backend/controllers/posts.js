@@ -13,16 +13,19 @@ const createPost= async(req, res)=>{
 }
 
 const updatePost= async(req, res)=>{
+  const id = req.params._id;
+
   try{
-    const Post = await PostModel.find(req.params._id);
+    const post = await PostModel.findById(id);
     if(post.username === req.body.username){
       try{
         const updatePost = await PostModel.findByIdAndUpdate(
           req.params._id,
           {$set :req.body,},
           {new:true});
-          res.status(200).json({data:updatePost, mss:updatePost});
+          res.status(200).json(updatePost);
       }catch (error) {
+        console.error(error)
         res.status(500).json(error);
       }
     }else{
