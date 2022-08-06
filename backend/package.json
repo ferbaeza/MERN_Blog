@@ -6,6 +6,8 @@
   "author": "FerBaeza",
   "license": "MIT",
   "scripts": {
+
+    "deve": "nodemon index.js && yarn ../blog start",
     "dev": "nodemon index.js"
   },
   "dependencies": {
