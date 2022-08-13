@@ -8,7 +8,7 @@ const dbConnect=()=>{
             URI,
             {
                 useNewUrlParser: true,
-                useUnifiedTopology: true
+                useUnifiedTopology: true,
             } 
         ).then(()=>console.log('Conexion correcta'))
         .catch(error=>console.error(error));
